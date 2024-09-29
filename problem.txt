@@ -1,0 +1,8 @@
+Personal Budget Tracker
+
+1. Add new income and expense entries
+2. Categorize entries (e.g., salary, groceries, utilities)
+3. Edit existing entries
+4. Delete entries
+5. View a summary of their budget (total income, total expenses, balance)
+6. Filter entries by type (income/expense) and category

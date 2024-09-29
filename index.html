@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Personal Budget Tracker</h1>
+
+        <form id="entryForm">
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <select id="category">
+                <option value="salary">Salary</option>
+                <option value="groceries">Groceries</option>
+                <option value="utilities">Utilities</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="other">Other</option>
+            </select>
+            <button type="submit">Add Entry</button>
+        </form>
+
+        <div class="summary">
+            <div>
+                <h3>Total Income</h3>
+                <p id="totalIncome">$0</p>
+            </div>
+            <div>
+                <h3>Total Expenses</h3>
+                <p id="totalExpenses">$0</p>
+            </div>
+            <div>
+                <h3>Balance</h3>
+                <p id="balance">$0</p>
+            </div>
+        </div>
+
+        <div>
+            <label for="filterType">Filter by Type:</label>
+            <select id="filterType">
+                <option value="all">All</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <label for="filterCategory">Filter by Category:</label>
+            <select id="filterCategory">
+                <option value="all">All</option>
+                <option value="salary">Salary</option>
+                <option value="groceries">Groceries</option>
+                <option value="utilities">Utilities</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <table id="entriesTable">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="entry-list"></tbody>
+        </table>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
